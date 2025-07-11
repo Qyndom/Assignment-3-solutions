@@ -1,0 +1,13 @@
+
+1. book.schema.js - Simulating a database model: The Book class defines the data structure and static methods (e.g., find, create) for CRUD operations. - Benefits of static methods: Encapsulates data logic, making it easy to switch to a real database. - Switching to a database: Replace static methods with database queries (e.g., Mongoose for MongoDB).
+2.  2. Error handling in todo.service.js - Non-existent todo: Throws a 404 error with a message like "Todo not found". - Updating non-existent todo: Should return a 404 error instead of crashing. - Improvements: Add input validation, handle edge cases explicitly, and log errors for debugging.
+
+--- ### Implementation Challenges 
+1. Pagination for book listing - Add query parameters (e.g., ?page=1&limit=10). - Modify the service to slice data based on page and limit. - Include pagination metadata in responses (e.g., total pages, current page). 
+2. Search functionality for books API - Add query parameters (e.g., ?search=title:Harry). - Implement filtering logic in the service layer to match fields like title or author. 
+3. User authentication and authorization - Use JWT middleware to verify tokens. - Add role-based access control (e.g., admin vs. user) in the service layer. - Store user data in a database.
+
+ --- ### Real-world Scenarios 
+1. Supporting multiple data sources - Abstract data access with a repository pattern. - Use dependency injection to switch between sources (e.g., file, MongoDB).    
+2. Real-time updates - Implement WebSockets (e.g., Socket.IO) or Server-Sent Events. - Notify clients of resource changes (e.g., new book added). 
+3. Rate limiting and API quotas - Use express-rate-limit middleware to limit requests per user/IP. - Track usage in a database or Redis for quota enforcement.

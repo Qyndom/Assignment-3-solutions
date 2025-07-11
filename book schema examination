@@ -1,3 +1,0 @@
-
-1. book.schema.js - Simulating a database model: The Book class defines the data structure and static methods (e.g., find, create) for CRUD operations. - Benefits of static methods: Encapsulates data logic, making it easy to switch to a real database. - Switching to a database: Replace static methods with database queries (e.g., Mongoose for MongoDB).
-2.  2. Error handling in todo.service.js - Non-existent todo: Throws a 404 error with a message like "Todo not found". - Updating non-existent todo: Should return a 404 error instead of crashing. - Improvements: Add input validation, handle edge cases explicitly, and log errors for debugging.
