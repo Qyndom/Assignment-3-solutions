@@ -1,0 +1,5 @@
+### ES6 Modules and Modern JavaScript
+
+ 1. CommonJS vs. ES6 modules - Syntax: - CommonJS: const module = require('./module'); module.exports = {...} - ES6: import module from './module.js'; export default {...} - Advantages of ES6: - Static analysis for better tooling (e.g., tree-shaking). - Cleaner syntax with named/default exports. - Support for asynchronous imports (import()). - Configuration: Set "type": "module" in package.json or use .mjs file extensions.
+
+ 2. Named exports vs. default exports - Named exports: export const func = () => {...}; imported as import { func } from './module'. Used for multiple exports. - Default exports: export default func; imported as import anyName from './module'. Used for a single primary export. - Use case: Use named exports for utility modules, default exports for main module functionality.
