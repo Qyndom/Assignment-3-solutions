@@ -1,0 +1,5 @@
+### Project Structure and Organization
+
+ 1. fs-books project structure - Separate directories (books/, common/, routes/): Organizes code by functionality (e.g., books/ for book-related logic, routes/ for endpoints). - Scalability: Modular structure allows adding new resources without affecting existing code. - Maintainability: Clear separation reduces complexity, making debugging and updates easier. - Benefits of separate files: - Controllers handle HTTP logic, services manage business logic, and schemas define data structures, improving clarity and testability.
+
+ 2. Role of utils.common.js - Utility functions: Includes reusable functions like sendResponse (standardizes API responses) or data validation helpers. - Code reuse: Centralizes common logic, reducing duplication and ensuring consistency across the app.
