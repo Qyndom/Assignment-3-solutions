@@ -1,0 +1,4 @@
+### Architecture and Design 
+1. MVC for team collaboration MVC assigns clear roles (e.g., backend for models/services, frontend for views), enabling parallel work and reducing conflicts.  
+2. Trade-offs of data persistence strategies - In-memory: Fast but non-persistent; unsuitable for production. - File-based: Simple but slow and concurrency-limited; good for prototyping. - Database: Scalable and robust but complex; ideal for production. 
+3. Scaling file-based storage - Use a lightweight database (e.g., SQLite) or a proper DBMS (e.g., MongoDB, PostgreSQL) for concurrency and scalability. - Implement caching to reduce file I/O.
