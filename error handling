@@ -1,0 +1,10 @@
+### Error Handling 
+1. catchAsync wrapper pattern - Simplification: Wraps async route handlers to catch errors and pass them to Express’s error-handling middleware using next(error). - Error handling: If an error is thrown, it’s caught and forwarded to the error middleware, preventing crashes. - Importance: Ensures consistent error handling in async code, critical for robust production apps.
+
+ 2. Handling errors in a REST API - HTTP status codes: - 400: Bad request (invalid input). - 
+
+401: Unauthorized (authentication failed). - 
+
+403: Forbidden (lacking permission). - 404: Not found (resource missing).
+
+ - 500: Server error (unexpected issues). - Meaningful error messages: Include a status code, message (e.g., "Book not found"), and optional details (e.g., field errors for validation). Avoid exposing sensitive data(e g stack traces) in production.
