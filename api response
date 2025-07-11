@@ -1,0 +1,3 @@
+### API Response Patterns 
+1. sendResponse utility function - Purpose: Standardizes API responses (e.g., { status: 'success', data: {...} }) for consistency. - Benefits for frontend: Predictable response structure simplifies client-side parsing and error handling. - Response contents: Include status, data, and optional metadata (e.g., pagination info). 
+2. Consistent error response format - Fields: { status: 'error', message: 'Error description', code: 400, details: {...} }. - Debugging vs. safety: Provide detailed errors (e.g., validation issues) in development, but limit sensitive info (e.g., stack traces) in production.
